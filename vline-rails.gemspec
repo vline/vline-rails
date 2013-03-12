@@ -10,10 +10,10 @@ Gem::Specification.new do |s|
   s.authors     = ["Ben Strong", "Prakash Ramakrishna", "Tom Hughes"]
   s.email       = ["ben@vline.com", "prakash@vline.com", "tom@vline.com"]
   s.homepage    = "https://vline.com"
-  s.summary     = "vline plugin for rails"
-  s.description = "A plugin that adds support for vline video chat to any rails app."
+  s.summary     = "vLine plugin for rails"
+  s.description = "A plugin that adds support for vLine video chat to any rails app."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.9"
