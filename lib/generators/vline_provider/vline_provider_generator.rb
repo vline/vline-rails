@@ -5,8 +5,8 @@ class VlineProviderGenerator < Rails::Generators::NamedBase
 
   argument :name, :type => :string, :default => 'Vline'
 
-  class_option :app_id, :type => :string, :required => true,
-               :desc => 'Your vline application id'
+  class_option :service_id, :type => :string, :required => true,
+               :desc => 'Your vLine Service ID'
   class_option :client_id, :type => :string, :default => SecureRandom.urlsafe_base64(32),
                :desc => 'OAUTH client ID'
   class_option :client_secret, :type => :string, :default => SecureRandom.urlsafe_base64(32),
@@ -42,7 +42,7 @@ class VlineProviderGenerator < Rails::Generators::NamedBase
   end
 
   def output
-    say_status "App ID", "#{options[:app_id]}", :blue
+    say_status "Service ID", "#{options[:service_id]}", :blue
     say_status "Client ID", "#{options[:client_id]}", :blue
     say_status "Client Secret", "#{options[:client_secret]}", :blue
   end

@@ -2,8 +2,8 @@ require 'grape'
 require 'jwt'
 
 module Vline
-  mattr_accessor :app_id
-  @@app_id = nil
+  mattr_accessor :service_id
+  @@service_id = nil
 
   mattr_accessor :provider_id
   @@provider_id = nil
@@ -154,7 +154,7 @@ module Vline
   end
 
   def self.auth_url
-    "#{Vline.client_callback_url_base}/#{Vline.app_id}/#{Vline.provider_id}"
+    "#{Vline.client_callback_url_base}/#{Vline.service_id}/#{Vline.provider_id}"
   end
 
   def self.auth_error_redirect_url(error, state)
