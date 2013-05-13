@@ -29,8 +29,8 @@ class VlineProviderGenerator < Rails::Generators::NamedBase
   end
 
   def add_routes
-    route "match '_vline/launch' => 'vline#launch'"
-    route "match '_vline/api/v1/oauth/authorize' => 'vline#authorize'"
+    route "match '_vline/launch' => 'vline#launch', :via => :get"
+    route "match '_vline/api/v1/oauth/authorize' => 'vline#authorize', :via => :get"
     route "mount Vline::API => '_vline/api'"
   end
 

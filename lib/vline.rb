@@ -118,7 +118,7 @@ module Vline
       end
       userId = validate_request_token(params[:code])
       token = Vline.create_access_token(userId)
-      "access_token=#{token}&token_type=bearer"
+      { access_token: "#{token}", token_type: "bearer" }
     end
 
     desc "Returns a user's profile"

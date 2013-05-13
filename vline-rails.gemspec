@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 3.2.9"
-  s.add_dependency "grape"
+  s.add_runtime_dependency 'rails', ['>= 3', '< 5']
+  s.add_dependency "grape", ['=0.4.1']
   s.add_dependency "jwt"
   s.add_dependency "rack-jsonp"
 end
